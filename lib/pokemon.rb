@@ -37,7 +37,7 @@ class Pokemon
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ? LIMIT 1
     SQL
-    
+
     results = db.execute(sql, id).flatten
     Pokemon.new_from_db(results)
   end
@@ -46,6 +46,6 @@ class Pokemon
     sql = <<-SQL
       UPDATE pokemon SET hp = ? WHERE id = ?
     SQL
-    db.execute(sql, hp, selfid)
+    db.execute(sql, hp, self.id)
   end
 end
