@@ -33,7 +33,7 @@ class Pokemon
   #   end
   # end
 
-  def self.find(id, db)
+  def self.find(id_num, db)
     # sql = <<-SQL
     #   SELECT * FROM pokemon WHERE id = ? LIMIT 1
     # SQL
