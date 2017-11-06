@@ -37,7 +37,7 @@ class Pokemon
     # sql = <<-SQL
     #   SELECT * FROM pokemon WHERE id = ? LIMIT 1
     # SQL
-    # 
+    #
     # results = db.execute(sql, id).flatten
     # Pokemon.new_from_db(results)
     pokemon_info = db.execute("SELECT * FROM pokemon WHERE id=?", id_num).flatten
