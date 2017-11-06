@@ -1,16 +1,12 @@
 class Pokemon
   attr_accessor :id, :name, :type, :db, :hp
 
-  # def initialize(options = {})
-  #   @name = options["name"]
-  #   @type = options["type"]
-  #   @db = options["db"]
-  #   @id = options["id"]
-  #   @hp = nil
-  # end
-
-  def initialize(id:, name:, type:, hp: nil, db:)
-    @id, @name, @type, @hp, @db = id, name, type, hp, db
+  def initialize(options = {})
+    @name = options["name"]
+    @type = options["type"]
+    @db = options["db"]
+    @id = options["id"]
+    @hp = nil
   end
 
   def self.save(name, type, db)
